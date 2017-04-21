@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/console.js"></script>
+</head>
+<body>
+	<h1 id="console">kaishi</h1>
+	<input type="hidden" id="hostIp" value="192.168.2.66:8081"/>
+	
+	<button class="websocket">websocket</button>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$(".websocket").click(function(){
+			console.log("开始socket");
+			$.ajax({
+			    url:'RunWebSockectServlet',
+			    type:'GET', //GET
+			    async:true,    //或false,是否异步
+			    timeout:500000,    //超时时间
+			    success:function(data){
+			        console.log(data)
+			    },
+			})
+		});
+		
+	});
+</script>
+</html>

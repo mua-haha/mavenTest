@@ -34,5 +34,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/WebCollector-2.40-beta.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jmxtools-1.2.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

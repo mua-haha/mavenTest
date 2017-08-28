@@ -1,26 +1,28 @@
 package com.hph.aaa.test;
 
-import java.sql.Timestamp;
+import java.text.DecimalFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.joda.time.DateTime;
-import org.joda.time.DateTimeZone;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import com.hph.socket.SocketUtils;
 
 public class Testtime {
-	
-	public static void main(String[] args) throws ParseException {
+
+	public static void main(String[] args) throws Exception {
+
+//		DecimalFormat de = new DecimalFormat("0000");
+//		System.out.println(de.format(10722));
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//		System.out.println(DateTime.now().toString("YYYYMMdd"));
+//		System.out.println(DateTime.now().toString("HHmmss"));
+//		System.out.println(Long.parseLong("1A", 16));
 		
-		Date d = sdf.parse("2012-12-11 00:00:00");
-		
-		Timestamp t = new Timestamp(d.getTime());
-		
-		DateTime dd =  new DateTime(t.getTime(), DateTimeZone.UTC);
-		System.out.println(dd);
-		
+		System.out.println(DateTime.now().toString("yyyyMMddHHmmss"));
+
 	}
 
 }

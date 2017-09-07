@@ -17,7 +17,7 @@ public class SocketUtils {
 
 	public static String socket(String data) throws Exception {
 
-		// 客户端请求与本机在20006端口建立TCP连接
+		// 客户端请求与本机在端口建立TCP连接
 		Socket client = new Socket("218.29.78.126", 5109);
 		client.setSoTimeout(10000);
 		// 获取键盘输入

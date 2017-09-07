@@ -13,6 +13,9 @@ public class BaseRequestBean {
 	public BaseRequestBean(){
 		this.date = DateTime.now().toString("YYYYMMdd");
 		this.time = DateTime.now().toString("HHmmss");
+		this.bankClerkNum = "system";
+		this.bankCode = "yikatong";
+		this.bankNetWorkPoint = "system";
 	}
 	/**
 	 * 报文长度 X(4)

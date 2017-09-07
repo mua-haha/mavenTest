@@ -19,11 +19,12 @@ import java.util.List;
 
 public class MainTest {
 	public static void main(String[] args) throws Exception {
+		String path = "F:/1Data/2017-09-06-93304条秘钥";
+		
 		String content = "";
 		String key = "";
 		
 		// 检查文件
-		String path = "C:/data/files/batch";
 		File pathFile = new File(path);
 		File[] files = pathFile.listFiles();
 		for (File f : files) {
@@ -35,8 +36,10 @@ public class MainTest {
 			}
 			
 		}
+		System.out.println("content: "+content);
+		System.out.println("key: "+key);
 		String result = BatchDecryptFactory.getBatchDecryptUtils().decrypt(content, key);
-		System.out.println(result);
+		System.out.println("解密TK: "+result);
 		for (File f : files) {
 			if(f.getName().endsWith(".txt")){
 				BatchAuthentication.checkKey(f.getAbsolutePath(), result);

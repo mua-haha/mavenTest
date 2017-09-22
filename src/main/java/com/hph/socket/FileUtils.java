@@ -10,16 +10,17 @@ public class FileUtils {
 	
 	/**
 	 * 按行写入
+	 * @param <T>
 	 * 
 	 * @param fileName
 	 * @param clist
 	 * @throws IOException
 	 */
-	public static void fileWriter(String fileName, List<String> clist) throws IOException {
+	public static <T> void fileWriter(String fileName, List<T> clist) throws IOException {
 		// true 表示追加
 		FileWriter fw = new FileWriter(fileName, true);
 		BufferedWriter writer = new BufferedWriter(fw);
-		Iterator<String> iterator = clist.iterator();
+		Iterator<T> iterator = clist.iterator();
 
 		while (iterator.hasNext()) {
 			String next = iterator.next().toString();

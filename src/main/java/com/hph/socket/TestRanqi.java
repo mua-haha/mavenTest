@@ -16,9 +16,12 @@ public class TestRanqi {
 	public static void main(String[] args) throws Exception {
 //		queryPrePay();
 //		payConfirm();
-		queryArrearage();
 //		String clearFile = "|2002|123456|20170809|091921|yikatong|system|system|4001825212|2|1.35|150.00|1708090124793|";
-//		System.out.println(SocketUtils.generate(clearFile));
+		
+		for(int i=0;i<500;i++){
+			System.out.println(i);
+			queryArrearage();
+		}
 		
 	}
 
@@ -158,15 +161,14 @@ public class TestRanqi {
 		bean.setCode("2001");
 		bean.setUserNum("4001825212");
 		String data = bean.toString();
-		System.out.println(data);
+//		System.out.println(data);
 		String str = SocketUtils.socket(data);
 		QueryArrearageResponseBean resp = new QueryArrearageResponseBean(str);
 		if ("0000".equals(resp.getRespCode())) {
-			System.out.println(resp.toString());
-			System.out.println(resp.getRecordContent().get(0).toString());
+//			System.out.println(resp.toString());
 			return resp;
 		} else {
-			System.out.println(str);
+//			System.out.println(str);
 			return null;
 		}
 

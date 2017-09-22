@@ -35,10 +35,14 @@ public class TestJavaNio {
 
 		TestJavaNio client = new TestJavaNio();
 
-		for (String host : HttpConstant.HOSTS) {
-
-			client.request(host, HttpConstant.PORT);
-
+//		for (String host : HttpConstant.HOSTS) {
+//
+//			client.request(host, HttpConstant.PORT);
+//
+//		}
+		for(int i=0;i<100;i++){
+			System.out.println(i);
+			client.request("www.baidu.com", 80);
 		}
 
 		client.select();

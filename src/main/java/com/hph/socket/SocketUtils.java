@@ -14,7 +14,8 @@ public class SocketUtils {
 		String data = generate(text);
 		System.out.println(data);
 	}
-
+	
+	public static int i = 0;
 	public static String socket(String data) throws Exception {
 
 		// 客户端请求与本机在端口建立TCP连接
@@ -28,6 +29,7 @@ public class SocketUtils {
 		BufferedReader buf = new BufferedReader(new InputStreamReader(client.getInputStream(), Charset.forName("GBK")));
 		out.println(data);
 		String echo = buf.readLine();
+		System.out.println(i++ +"--------"+echo);
 		input.close();
 
 		if (client != null) {

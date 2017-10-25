@@ -19,7 +19,7 @@ import java.util.List;
 
 public class MainTest {
 	public static void main(String[] args) throws Exception {
-		String path = "F:/1Data/2017-09-06-93304条秘钥";
+		String path = "C:/11";
 		
 		String content = "";
 		String key = "";

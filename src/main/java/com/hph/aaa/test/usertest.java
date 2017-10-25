@@ -1,22 +1,26 @@
 package com.hph.aaa.test;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.nio.charset.Charset;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 public class usertest {
-	public static void getAjaxCotnent(String url) throws Exception {
-		Process process = Runtime.getRuntime().exec("C:/phantomjs/phantomjs-2.1.1-windows/bin/phantomjs.exe C:/phantomjs/phantomjs-2.1.1-windows/hello/hello.js  " + url);
-		Thread.sleep(5000);
-		BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream(), Charset.forName("GBK")));
-		String line = null;
-		while ((line = br.readLine()) != null) {
-			System.out.println(line);
-		}
-	}
 
+//	public static void main(String[] args) throws Exception {
+//		Elements s = Jsoup.connect("http://music.163.com/playlist?id=317113395")
+//				.get().select("ul[class=f-hide] a");
+//		for(Element e:s){
+//			System.out.println(e.attr("href"));
+//			System.out.println(e);
+//		}
+//	}
 	public static void main(String[] args) throws Exception {
-		getAjaxCotnent("http://music.163.com");
+		Document s = Jsoup.connect("http://music.163.com/playlist?id=317113395")
+				.get();
+		System.out.println(s.toString());
 	}
+	
 
 }

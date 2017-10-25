@@ -22,15 +22,14 @@ public class MergeUtil {
 
 	public static void main(String[] args) throws Exception {
 		MergeUtil test = new MergeUtil();
-		File pathFile = new File("F:/1Data/2017-09-06-93304条秘钥");
+		File pathFile = new File("C:/11");
 		File[] files = pathFile.listFiles();
 		List<String> fileNameList = new ArrayList<>();
 		for (File f : files) {
 			fileNameList.add(f.getAbsolutePath());
 		}
-//		int num = test.dealPeopleFile(fileNameList);
-//		System.out.println("人口数据：" + num + "条");
-		test.dealKeyFile(fileNameList,93304);
+//		System.out.println(test.getAllKey(fileNameList));
+		test.dealKeyFile(fileNameList,test.getAllKey(fileNameList));
 
 	}
 
@@ -83,15 +82,6 @@ public class MergeUtil {
 		if (!pathFile.exists() && !pathFile.isDirectory()) {
 			pathFile.mkdir();
 		}
-//		// 得到总数
-//		for (String filePath : fileNameList) {
-//			String fileName = filePath.substring(filePath.lastIndexOf(File.separator) + 1);
-//			if (fileName.startsWith("许都通项目") && fileName.endsWith("txt")) {
-//				String[] ss = fileName.split("_");
-//				String s = ss[4];
-//				num += Integer.parseInt(s.substring(0, s.length() - 5));
-//			}
-//		}
 		System.out.println("秘钥数据：" + num + "条");
 		String dateString = DateTime.now().toString("yyyyMMdd");
 		String newFileName = path.concat("/许都通项目_大唐_" + dateString + "_PC0066_" + num + "张.txt");
@@ -119,6 +109,25 @@ public class MergeUtil {
 			}
 		}
 
+	}
+	/**
+	 * 
+	 * 得到总共多少条秘钥
+	 * 
+	 * @throws Exception
+	 */
+	public int getAllKey(List<String> fileNameList) throws Exception {
+		int all = 0;
+		// 写入吗，秘钥文件
+		for (String filePath : fileNameList) {
+			String fileName = filePath.substring(filePath.lastIndexOf(File.separator) + 1);
+			if ( fileName.endsWith("txt")) {
+				// 待写入list
+				List<String> clist = readFileByLines(filePath);
+				all +=clist.size();
+			}
+		}
+		return all;
 	}
 
 	/**

@@ -22,13 +22,15 @@ public class MergeUtil {
 
 	public static void main(String[] args) throws Exception {
 		MergeUtil test = new MergeUtil();
-		File pathFile = new File("C:/11");
+		File pathFile = new File("C:/data/files/batch");
 		File[] files = pathFile.listFiles();
 		List<String> fileNameList = new ArrayList<>();
 		for (File f : files) {
 			fileNameList.add(f.getAbsolutePath());
 		}
-//		System.out.println(test.getAllKey(fileNameList));
+		int needNum = 32745;
+		int hasNum = test.getAllKey(fileNameList);
+//		System.out.println("总共："+needNum+"，现有："+hasNum+"，再生成："+(needNum-hasNum));
 		test.dealKeyFile(fileNameList,test.getAllKey(fileNameList));
 
 	}

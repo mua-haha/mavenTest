@@ -20,14 +20,15 @@ public class Test {
 
 	public static Map<String, String> map = new HashMap<>();
 	// 
-	public static String  url = "http://www.5du5.net/book/2/2978/";
+//	public static String  url = "http://www.5du5.net/book/2/2978/";
+	public static String  url = "http://www.qingkanshu.cc/0_594/";
 
 	public static void main(String[] args) throws Exception {
 		
 		Document d = Jsoup.connect(url).get();
 		Elements es = d.select("div[id='list']").select("a");
 		List<String> list = new ArrayList<>();
-		File file = new File("D:/宁小闲御神录.txt");
+		File file = new File("C:/11/test.txt");
 		if (!file.exists()) {
 			file.createNewFile();
 		}

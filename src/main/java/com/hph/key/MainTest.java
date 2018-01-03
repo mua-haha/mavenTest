@@ -19,7 +19,7 @@ import java.util.List;
 
 public class MainTest {
 	public static void main(String[] args) throws Exception {
-		String path = "C:/11";
+		String path = "C:/11/secret";
 		
 		String content = "";
 		String key = "";

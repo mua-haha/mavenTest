@@ -4,7 +4,7 @@ import org.springframework.util.StopWatch;
 
 public class Test {
 	public static void main(String[] args) throws InterruptedException {
-		PoiExcelProvider p = new PoiExcelProvider("C:/11/bb.xlsx");
+		PoiExcelProvider p = new PoiExcelProvider("C:/11/aa.xlsx");
 		StopWatch watch = new StopWatch("任务耗时统计");
 		watch.start("读取excel");
 		int i=0;

@@ -21,7 +21,7 @@ public class Test {
 	public static Map<String, String> map = new HashMap<>();
 	// 
 //	public static String  url = "http://www.5du5.net/book/2/2978/";
-	public static String  url = "http://www.qingkanshu.cc/0_594/";
+	public static String  url = "http://www.wdxsw.com/book/311/";
 
 	public static void main(String[] args) throws Exception {
 		

@@ -19,7 +19,7 @@ import java.util.List;
 
 public class MainTest {
 	public static void main(String[] args) throws Exception {
-		String path = "C:/11/secret";
+		String path = "F:/1Data/测试数据/2018-01-10-10条学生测试数据/秘钥";
 		
 		String content = "";
 		String key = "";
@@ -46,6 +46,7 @@ public class MainTest {
 			}
 		}
 	}
+	
 	
 	/**
 	 * 按行 读取

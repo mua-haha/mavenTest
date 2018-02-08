@@ -42,7 +42,7 @@ public class BatchAuthentication {
 
 				byte[] bb = des.encryptMode3DES(hexStringToBytes(tt_key), hexStringToBytes(DES_JM_KEY));
 				String t_result = byte2hex(bb).replace(":", "");// 将解密后的数组转换成16进制字符串
-				System.out.println(t_result);
+//				System.out.println(t_result);
 				String tt_result = t_result.substring(0, 6);// 取解密结果的前6位
 
 				if (!t_sufx.equals(tt_result)) {

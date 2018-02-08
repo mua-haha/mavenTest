@@ -21,7 +21,10 @@ public class Testtime {
 //		System.out.println(DateTime.now().toString("HHmmss"));
 //		System.out.println(Long.parseLong("1A", 16));
 		
-		System.out.println(DateTime.now().toString("yyyyMMddHHmmss"));
+//		System.out.println(DateTime.now().toString("yyyyMMddHHmmss"));
+		String s = "哈哈哈啦啦哈哈";
+		String[] a = s.split("啦啦");
+		System.out.println(a.length);
 
 	}
 

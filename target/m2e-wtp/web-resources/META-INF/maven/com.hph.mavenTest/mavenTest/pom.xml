@@ -8,6 +8,13 @@
 		<restlet.version>2.3.9</restlet.version>
 	</properties>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.linuxense/javadbf -->
+		<dependency>
+			<groupId>com.linuxense</groupId>
+			<artifactId>javadbf</artifactId>
+			<version>0.4.0</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-core -->
 		<dependency>
 			<groupId>org.apache.hadoop</groupId>
@@ -15,10 +22,10 @@
 			<version>1.2.1</version>
 		</dependency>
 		<dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-client</artifactId>
-            <version>2.7.0</version>
-        </dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-client</artifactId>
+			<version>2.7.0</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.undertow/undertow-core -->
 		<dependency>
 			<groupId>io.undertow</groupId>
